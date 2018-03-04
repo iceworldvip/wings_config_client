@@ -7,7 +7,7 @@ from __future__ import unicode_literals
 
 from unittest import TestCase
 
-from util.config.engine.mysql_engine import MySQLEngine
+from myconf.engine.mysql_engine import MySQLEngine
 
 
 class TestMySQLEngine(TestCase):

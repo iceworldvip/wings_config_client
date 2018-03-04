@@ -9,7 +9,7 @@ import logging
 
 from kazoo.client import KazooClient
 
-from util.config.engine.engine import AbstractEngine
+from myconf.engine.engine import AbstractEngine
 
 
 class ZookeeperEngine(AbstractEngine):

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time     : 2018/1/13 15:32
 # @Author   : ice
-# @File     : dict_study.py
+# @File     : test_dict.py
 # @Software : PyCharm
 
 
@@ -17,4 +17,4 @@ b = {
     'y': 2
 }
 if __name__ == '__main__':
-    print set(a.keys()) & set(b.keys())
+    print(set(a.keys()) & set(b.keys()))

@@ -5,7 +5,7 @@
 # @Software : PyCharm
 from __future__ import unicode_literals
 
-from util.config.path.config_path import ConfigPath
+from myconf.path import ConfigPath
 
 
 class PathManager(object):

@@ -7,8 +7,8 @@ from __future__ import unicode_literals
 
 from unittest import TestCase
 
-from util.config.path.config_path import ConfigPath
-from util.config.path.path_manager import PathManager
+from myconf.path import ConfigPath
+from myconf.path import PathManager
 
 
 class TestPathManager(TestCase):

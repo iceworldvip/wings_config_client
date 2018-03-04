@@ -8,9 +8,9 @@ from __future__ import unicode_literals
 import logging
 from unittest import TestCase
 
-from util.config.config_manager import ConfigManager
-from util.config.engine.mysql_engine import MySQLEngine
-from util.config.engine.zookeeper_engine import ZookeeperEngine
+from myconf.config_manager import ConfigManager
+from myconf.engine.mysql_engine import MySQLEngine
+from myconf.engine.zookeeper import ZookeeperEngine
 
 logging.root.setLevel(logging.DEBUG)
 
