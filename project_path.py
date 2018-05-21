@@ -3,6 +3,9 @@
 # @Author   : ice
 # @File     : project_path.py
 # @Software : PyCharm
+"""
+获取项目路径
+"""
 import os
 
-project_path = os.path.dirname(os.path.abspath(__file__))
+PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))

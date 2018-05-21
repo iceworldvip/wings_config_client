@@ -5,7 +5,11 @@
 # @Software : PyCharm
 from __future__ import unicode_literals
 
-from myconf.engine.engine import AbstractEngine
+from myconf.engine.zookeeper_engine import ZookeeperEngine
+
+"""
+配置管理器
+"""
 
 
 class ConfigManager(object):
@@ -15,7 +19,7 @@ class ConfigManager(object):
 
     def __init__(
             self,
-            engine=AbstractEngine,
+            engine=ZookeeperEngine,
             **kwargs
     ):
         """
@@ -26,17 +30,21 @@ class ConfigManager(object):
         """
         self.engine = engine(**kwargs)
 
-    def get_config(
-            self,
-            config_host="mersea",
-            config_type='dev',
-            config_version=None,
-            **kwargs):
+    def get_config(self, **kwargs):
+        """
+        获取配置
+        :param kwargs:
+        :return:
+        """
         self.engine.connect()
-        config_data = self.engine.get_config_by_key(
-            config_host=config_host,
-            config_type=config_type,
-            config_version=str(config_version),
-            **kwargs
-        )
+        config_data = self.engine.get_config_by_key(**kwargs)
+        return config_data
+
+    def get_all_config(self):
+        """
+        获取所有配置
+        :return:
+        """
+        self.engine.connect()
+        config_data = self.engine.get_all_config()
         return config_data
